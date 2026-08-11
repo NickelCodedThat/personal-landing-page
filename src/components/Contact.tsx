@@ -1,4 +1,8 @@
 function Contact() {
+  function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
+  event.preventDefault()
+}
+
   return (
     <section className="contact" id="contact">
       <div className="container">
@@ -29,7 +33,9 @@ function Contact() {
             </div>
           </div>
 
-          <form className="contact-form">
+          <form className="contact-form"
+                onSubmit={handleSubmit}
+          >
             <div className="contact-form__row">
               <div className="contact-form__field">
                 <label htmlFor="name">Name</label>
@@ -39,6 +45,7 @@ function Contact() {
                   name="name"
                   type="text"
                   placeholder="Your name"
+                  required
                 />
               </div>
 
@@ -50,6 +57,7 @@ function Contact() {
                   name="email"
                   type="email"
                   placeholder="you@example.com"
+                  required
                 />
               </div>
             </div>
@@ -62,6 +70,7 @@ function Contact() {
                 name="message"
                 rows={6}
                 placeholder="Tell me about your project or opportunity..."
+                required
               ></textarea>
             </div>
 

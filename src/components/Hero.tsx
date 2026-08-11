@@ -1,6 +1,6 @@
 function Hero() {
   return (
-    <section className="hero" id="home">
+    <section className="hero" id="home" aria-labelledby="hero-title">
       <div className="container">
         <div className="hero__grid">
 
@@ -10,7 +10,7 @@ function Hero() {
               Available for opportunities
             </p>
 
-            <h1 className="hero__title">
+            <h1 className="hero__title" id="hero-title">
               I build digital experiences that turn ideas into products.
             </h1>
 

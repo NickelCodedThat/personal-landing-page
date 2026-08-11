@@ -2,13 +2,13 @@ import { capabilities } from '../data/capabilities'
 
 function About() {
   return (
-    <section className="about" id="about">
+    <section className="about" id="about" aria-labelledby="about-title">
       <div className="container">
         <div className="about__grid">
           <div className="about__intro">
             <p className="section-heading__eyebrow">About</p>
 
-            <h2 className="about__title">
+            <h2 className="about__title" id="about-title">
               I bring more than code to the problem.
             </h2>
 

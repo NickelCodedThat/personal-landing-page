@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="630" viewBox="0 0 1200 630" role="img" aria-labelledby="title desc">
+  <title id="title">Nickel Boyce — Front-End Developer and Entrepreneur</title>
+  <desc id="desc">A midnight portfolio preview with violet accents and the message Building useful digital products.</desc>
+  <defs>
+    <radialGradient id="glow" cx="0" cy="0" r="1" gradientTransform="translate(970 60) rotate(135) scale(570 440)" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#7C6CFF" stop-opacity=".3"/>
+      <stop offset=".58" stop-color="#7C6CFF" stop-opacity=".06"/>
+      <stop offset="1" stop-color="#7C6CFF" stop-opacity="0"/>
+    </radialGradient>
+    <linearGradient id="panel" x1="165" y1="46" x2="1014" y2="598" gradientUnits="userSpaceOnUse">
+      <stop stop-color="#151B26" stop-opacity=".96"/>
+      <stop offset="1" stop-color="#0E131B" stop-opacity=".9"/>
+    </linearGradient>
+    <linearGradient id="accent" x1="0" y1="0" x2="1" y2="1">
+      <stop stop-color="#9A90FF"/>
+      <stop offset="1" stop-color="#6F60F2"/>
+    </linearGradient>
+    <pattern id="grid" width="48" height="48" patternUnits="userSpaceOnUse">
+      <path d="M48 0H0V48" fill="none" stroke="#FFFFFF" stroke-opacity=".028"/>
+    </pattern>
+    <filter id="shadow" x="70" y="6" width="1060" height="638" filterUnits="userSpaceOnUse">
+      <feDropShadow dx="0" dy="24" stdDeviation="28" flood-color="#000000" flood-opacity=".46"/>
+    </filter>
+  </defs>
+
+  <rect width="1200" height="630" fill="#0B0F14"/>
+  <rect width="1200" height="630" fill="url(#grid)"/>
+  <rect width="1200" height="630" fill="url(#glow)"/>
+
+  <g filter="url(#shadow)">
+    <rect x="94" y="54" width="1012" height="522" rx="30" fill="url(#panel)" stroke="#FFFFFF" stroke-opacity=".1"/>
+  </g>
+
+  <rect x="136" y="98" width="48" height="48" rx="14" fill="url(#accent)"/>
+  <path d="M162 108 147 129h12l-7 15 21-24h-12l7-12h-6Z" fill="#FFFFFF"/>
+
+  <text x="204" y="121" fill="#F5F7FA" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="24" font-weight="700" letter-spacing="-.5">Nickel Boyce</text>
+  <text x="204" y="143" fill="#98A2B3" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="500" letter-spacing="1.8">PORTFOLIO / 2026</text>
+
+  <g transform="translate(806 103)">
+    <rect width="256" height="38" rx="19" fill="#6F60F2" fill-opacity=".15" stroke="#8D82FF" stroke-opacity=".45"/>
+    <circle cx="22" cy="19" r="4" fill="#4ADE80"/>
+    <text x="36" y="24" fill="#D8D4FF" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="13" font-weight="650" letter-spacing="1">AVAILABLE FOR OPPORTUNITIES</text>
+  </g>
+
+  <text x="136" y="254" fill="#F5F7FA" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="68" font-weight="740" letter-spacing="-3.2">Building useful</text>
+  <text x="136" y="329" fill="#F5F7FA" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="68" font-weight="740" letter-spacing="-3.2">digital products.</text>
+
+  <text x="140" y="386" fill="#AAB3C2" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="22" font-weight="400">Modern websites, polished interfaces, and practical software</text>
+  <text x="140" y="419" fill="#AAB3C2" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="22" font-weight="400">solutions shaped by business and real-world experience.</text>
+
+  <line x1="136" y1="468" x2="1062" y2="468" stroke="#FFFFFF" stroke-opacity=".1"/>
+
+  <text x="136" y="516" fill="#8D82FF" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="700" letter-spacing="1.6">FRONT-END DEVELOPMENT</text>
+  <text x="419" y="516" fill="#98A2B3" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="600" letter-spacing="1.2">REACT</text>
+  <text x="511" y="516" fill="#98A2B3" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="600" letter-spacing="1.2">TYPESCRIPT</text>
+  <text x="648" y="516" fill="#98A2B3" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="14" font-weight="600" letter-spacing="1.2">UI ENGINEERING</text>
+  <text x="1062" y="516" fill="#F5F7FA" font-family="Inter, -apple-system, BlinkMacSystemFont, Segoe UI, sans-serif" font-size="15" font-weight="650" text-anchor="end">South Carolina</text>
+</svg>

@@ -1,75 +1,51 @@
-# React + TypeScript + Vite
+# Nickel Boyce — Developer Portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+![Nickel Boyce portfolio preview](public/social-preview.png)
 
-Currently, two official plugins are available:
+A responsive personal portfolio for Nickel Boyce, a front-end developer and entrepreneur building modern websites, interfaces, and practical digital products.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+[View the live portfolio](https://personal-landing-page-swart-iota.vercel.app/)
 
-## React Compiler
+## Highlights
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- Premium midnight interface with a restrained violet accent system
+- Responsive layouts for desktop, tablet, and mobile
+- Accessible keyboard focus, skip navigation, semantic landmarks, and reduced-motion support
+- Project presentation with public-demo and protected-client states
+- Responsive AVIF project imagery with WebP fallbacks
+- Transparent email-draft contact workflow with direct email and phone alternatives
+- Open Graph, X/Twitter card, canonical, favicon, and theme metadata
 
-## Expanding the ESLint configuration
+## Built with
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- React 19
+- TypeScript
+- CSS
+- Vite
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Local development
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm install
+npm run dev
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Quality checks
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm run lint
+npm run build
 ```
+
+## Project structure
+
+```text
+src/
+├── assets/       Project imagery
+├── components/   Page sections and reusable project presentation
+├── data/         Project, experience, capability, and toolkit content
+├── App.tsx       Page composition and skip navigation
+└── index.css     Design system and responsive styles
+```
+
+Some client previews are intentionally not linked publicly. Their portfolio cards clearly identify the protected state without exposing private deployments or source code.

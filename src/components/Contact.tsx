@@ -1,34 +1,32 @@
 function Contact() {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
-  event.preventDefault()
+    event.preventDefault()
 
-  const form = event.currentTarget
-  const formData = new FormData(form)
+    const formData = new FormData(event.currentTarget)
+    const name = String(formData.get('name') ?? '')
+    const email = String(formData.get('email') ?? '')
+    const message = String(formData.get('message') ?? '')
 
-  const name = formData.get('name')
-  const email = formData.get('email')
-  const message = formData.get('message')
+    const subject = encodeURIComponent(`Portfolio contact from ${name}`)
+    const body = encodeURIComponent(
+      `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`,
+    )
 
-  const subject = encodeURIComponent(
-    `Portfolio contact from ${name}`
-  )
-
-  const body = encodeURIComponent(
-    `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
-  )
-
-  window.location.href =
-    `mailto:nickboyce.tech@icloud.com?subject=${subject}&body=${body}`
-}
+    window.location.href = `mailto:nickboyce.tech@icloud.com?subject=${subject}&body=${body}`
+  }
 
   return (
-    <section className="contact" id="contact">
+    <section
+      className="contact"
+      id="contact"
+      aria-labelledby="contact-title"
+    >
       <div className="container">
         <div className="contact__panel">
           <div className="contact__content">
             <p className="section-heading__eyebrow">Contact</p>
 
-            <h2 className="contact__title">
+            <h2 className="contact__title" id="contact-title">
               Let&apos;s build something worth shipping.
             </h2>
 
@@ -43,7 +41,6 @@ function Contact() {
             <div className="contact__details">
               <div>
                 <p className="contact__label">Email</p>
-
                 <a
                   className="contact__link"
                   href="mailto:nickboyce.tech@icloud.com"
@@ -53,28 +50,22 @@ function Contact() {
               </div>
               <div>
                 <p className="contact__label">Phone</p>
-
-                <a
-                  className="contact__link"
-                  href="tel:+13322811444"
-                  >
+                <a className="contact__link" href="tel:+13322811444">
                   (332) 281-1444
                 </a>
               </div>
             </div>
           </div>
 
-          <form className="contact-form"
-                onSubmit={handleSubmit}
-          >
+          <form className="contact-form" onSubmit={handleSubmit}>
             <div className="contact-form__row">
               <div className="contact-form__field">
                 <label htmlFor="name">Name</label>
-
                 <input
                   id="name"
                   name="name"
                   type="text"
+                  autoComplete="name"
                   placeholder="Your name"
                   required
                 />
@@ -82,11 +73,12 @@ function Contact() {
 
               <div className="contact-form__field">
                 <label htmlFor="email">Email</label>
-
                 <input
                   id="email"
                   name="email"
                   type="email"
+                  inputMode="email"
+                  autoComplete="email"
                   placeholder="you@example.com"
                   required
                 />
@@ -95,7 +87,6 @@ function Contact() {
 
             <div className="contact-form__field">
               <label htmlFor="message">Message</label>
-
               <textarea
                 id="message"
                 name="message"
@@ -105,12 +96,18 @@ function Contact() {
               ></textarea>
             </div>
 
-            <button
-              className="button button--primary contact-form__submit"
-              type="submit"
-            >
-              Draft Email
-            </button>
+            <div className="contact-form__footer">
+              <button
+                className="button button--primary contact-form__submit"
+                type="submit"
+                aria-describedby="contact-form-note"
+              >
+                Draft Email
+              </button>
+              <p className="contact-form__note" id="contact-form-note">
+                Opens your default email app. Nothing is sent automatically.
+              </p>
+            </div>
           </form>
         </div>
       </div>

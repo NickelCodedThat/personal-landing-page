@@ -2,12 +2,16 @@ import { experience } from '../data/experience'
 
 function Experience() {
   return (
-    <section className="experience" id="experience">
+    <section
+      className="experience"
+      id="experience"
+      aria-labelledby="experience-title"
+    >
       <div className="container">
         <div className="section-heading">
           <p className="section-heading__eyebrow">Experience</p>
 
-          <h2 className="section-heading__title">
+          <h2 className="section-heading__title" id="experience-title">
             Technical thinking backed by real-world experience.
           </h2>
 
@@ -29,6 +33,8 @@ function Experience() {
               </div>
 
               <div className="experience-item__content">
+                <p className="experience-item__context">{item.context}</p>
+
                 <h3 className="experience-item__company">
                   {item.company}
                 </h3>

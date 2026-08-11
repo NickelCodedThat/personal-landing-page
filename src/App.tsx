@@ -10,20 +10,24 @@ import Footer from './components/Footer'
 
 function App() {
   return (
-    <>
-      <Header />
+<>
+  <a className="skip-link" href="#main-content">
+    Skip to main content
+  </a>
 
-      <main>
-        <Hero />
-        <About />
-        <Projects />
-        <Experience />
-        <TechStack />
-        <Contact />
-      </main>
+  <Header />
 
-      <Footer />
-    </>
+  <main id="main-content" tabIndex={-1}>
+    <Hero />
+    <About />
+    <Projects />
+    <Experience />
+    <TechStack />
+    <Contact />
+  </main>
+
+  <Footer />
+</>
   )
 }
 

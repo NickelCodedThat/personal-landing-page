@@ -1,6 +1,24 @@
 function Contact() {
   function handleSubmit(event: React.FormEvent<HTMLFormElement>) {
   event.preventDefault()
+
+  const form = event.currentTarget
+  const formData = new FormData(form)
+
+  const name = formData.get('name')
+  const email = formData.get('email')
+  const message = formData.get('message')
+
+  const subject = encodeURIComponent(
+    `Portfolio contact from ${name}`
+  )
+
+  const body = encodeURIComponent(
+    `Name: ${name}\nEmail: ${email}\n\nMessage:\n${message}`
+  )
+
+  window.location.href =
+    `mailto:nickboyce.tech@icloud.com?subject=${subject}&body=${body}`
 }
 
   return (
@@ -18,6 +36,9 @@ function Contact() {
               I&apos;m open to development opportunities, freelance projects,
               and conversations about useful digital products.
             </p>
+            <p className="contact__note">
+              Use the form to prepare an email, or contact me directly below.
+            </p>
 
             <div className="contact__details">
               <div>
@@ -28,6 +49,16 @@ function Contact() {
                   href="mailto:nickboyce.tech@icloud.com"
                 >
                   nickboyce.tech@icloud.com
+                </a>
+              </div>
+              <div>
+                <p className="contact__label">Phone</p>
+
+                <a
+                  className="contact__link"
+                  href="tel:+13322811444"
+                  >
+                  (332) 281-1444
                 </a>
               </div>
             </div>
@@ -78,7 +109,7 @@ function Contact() {
               className="button button--primary contact-form__submit"
               type="submit"
             >
-              Send Message
+              Draft Email
             </button>
           </form>
         </div>

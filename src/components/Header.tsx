@@ -59,11 +59,14 @@ function Header() {
             }`}
             id="primary-navigation"
           >
+            <a href="#products" onClick={closeMenu}>
+              Products
+            </a>
             <a href="#about" onClick={closeMenu}>
               About
             </a>
-            <a href="#projects" onClick={closeMenu}>
-              Projects
+            <a href="#client-work" onClick={closeMenu}>
+              Client Work
             </a>
             <a href="#experience" onClick={closeMenu}>
               Experience

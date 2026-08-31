@@ -1,33 +1,27 @@
+import { BrowserRouter, Routes, Route } from 'react-router-dom'
 import Header from './components/Header'
-import Hero from './components/Hero'
-import About from './components/About'
-import Projects from './components/Projects'
-import Experience from './components/Experience'
-import TechStack from './components/TechStack'
-import Contact from './components/Contact'
+import Home from './components/Home'
+import CaseStudy from './components/CaseStudy'
+import NotFound from './components/NotFound'
 import Footer from './components/Footer'
-
 
 function App() {
   return (
-<>
-  <a className="skip-link" href="#main-content">
-    Skip to main content
-  </a>
+    <BrowserRouter>
+      <a className="skip-link" href="#main-content">
+        Skip to main content
+      </a>
 
-  <Header />
+      <Header />
 
-  <main id="main-content" tabIndex={-1}>
-    <Hero />
-    <About />
-    <Projects />
-    <Experience />
-    <TechStack />
-    <Contact />
-  </main>
+      <Routes>
+        <Route path="/" element={<Home />} />
+        <Route path="/work/:slug" element={<CaseStudy />} />
+        <Route path="*" element={<NotFound />} />
+      </Routes>
 
-  <Footer />
-</>
+      <Footer />
+    </BrowserRouter>
   )
 }
 

@@ -21,10 +21,10 @@ export const experience: ExperienceItem[] = [
     id: 2,
     period: '2026 — Present',
     context: 'Self-directed development',
-    company: 'Independent Projects',
-    role: 'Front-End Developer',
+    company: 'Independent Products',
+    role: 'Product Engineer',
     description:
-      'Building real-world web projects to deepen practical experience with React, TypeScript, responsive UI development, APIs, testing, and modern deployment workflows.',
+      'Designing and building full-stack software products end to end — multi-tenant architecture, PostgreSQL and PostGIS data modeling, and the React/TypeScript interfaces on top of them.',
   },
   {
     id: 3,

@@ -16,8 +16,8 @@ function TechStack() {
           </h2>
 
           <p className="section-heading__description">
-            A focused front-end toolkit, organized by what I use and how I
-            approach reliable, responsive delivery.
+            A full-stack toolkit, organized by what I use and how I approach
+            reliable, well-architected delivery.
           </p>
         </div>
 

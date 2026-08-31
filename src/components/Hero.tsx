@@ -1,3 +1,5 @@
+import HeroProofPanel from './HeroProofPanel'
+
 function Hero() {
   return (
     <section className="hero" id="home" aria-labelledby="hero-title">
@@ -11,21 +13,21 @@ function Hero() {
             </p>
 
             <h1 className="hero__title" id="hero-title">
-              I build digital experiences that turn ideas into products.
+              I build software systems that businesses run on.
             </h1>
 
             <p className="hero__description">
-              I’m Nickel Boyce, a developer and entrepreneur focused on
-              building modern websites, interfaces, and practical software
-              solutions.
+              I’m Nickel Boyce, a product engineer and technical founder.
+              I design and build operations software, data systems, and
+              digital businesses — from architecture through production.
             </p>
 
             <div className="hero__actions">
               <a
                 className="button button--primary"
-                href="#projects"
+                href="#products"
               >
-                View Projects
+                View Products
               </a>
 
               <a
@@ -38,31 +40,7 @@ function Hero() {
           </div>
 
           <div className="hero__visual">
-            <div className="hero-card">
-              <p className="hero-card__label">
-                Current focus
-              </p>
-
-              <h2 className="hero-card__title">
-                Building useful digital products.
-              </h2>
-
-              <p className="hero-card__text">
-                React · TypeScript · CSS · UI Engineering
-              </p>
-
-              <div className="hero-card__meta">
-                <div>
-                  <span>Based in</span>
-                  <strong>South Carolina</strong>
-                </div>
-
-                <div>
-                  <span>Building</span>
-                  <strong>Web + Software</strong>
-                </div>
-              </div>
-            </div>
+            <HeroProofPanel />
           </div>
 
         </div>

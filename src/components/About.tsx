@@ -20,9 +20,9 @@ function About() {
             </p>
 
             <p className="about__description">
-              I&apos;m currently focused on modern front-end development while
-              continuing to build real-world websites, products, and business
-              solutions.
+              I&apos;m currently focused on full-stack product engineering —
+              operations platforms, data systems, and the client work that
+              keeps a small business running.
             </p>
           </div>
 

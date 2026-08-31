@@ -16,6 +16,10 @@ import coastalAvif720 from '../assets/clients/coastal-property-services-720.avif
 import coastalAvif1200 from '../assets/clients/coastal-property-services-1200.avif'
 import coastalWebp720 from '../assets/clients/coastal-property-services-720.webp'
 import coastalWebp1200 from '../assets/clients/coastal-property-services-1200.webp'
+import greenBrosAvif720 from '../assets/clients/green-bros-720.avif'
+import greenBrosAvif1200 from '../assets/clients/green-bros-1200.avif'
+import greenBrosWebp720 from '../assets/clients/green-bros-720.webp'
+import greenBrosWebp1200 from '../assets/clients/green-bros-1200.webp'
 
 export type ClientProject = {
   id: number
@@ -119,6 +123,13 @@ export const clientProjects: ClientProject[] = [
       'A positioning-focused marketing site for a commercial facilities-services company, built to read as established and credible to property owners and managers.',
     focus: 'Positioning · Lead generation',
     tech: ['Astro', 'TypeScript'],
+    image: {
+      avif: [greenBrosAvif720, greenBrosAvif1200],
+      webp: [greenBrosWebp720, greenBrosWebp1200],
+      width: 1200,
+      height: 698,
+      alt: 'Green Bros commercial cleaning website homepage showing the hero headline and service positioning',
+    },
     status: 'in-development',
     protected: false,
   },

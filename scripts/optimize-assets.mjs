@@ -36,8 +36,8 @@ const jobs = [
     sizes: widths.desktop,
   },
   {
-    src: 'scripts/scv2-storm-center-raw.png',
-    out: 'src/assets/more-work/scv2-storm-center',
+    src: 'scripts/green-bros-hero-raw.png',
+    out: 'src/assets/clients/green-bros',
     sizes: widths.desktop,
   },
 ]

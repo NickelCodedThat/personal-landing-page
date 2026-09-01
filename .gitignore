@@ -22,3 +22,7 @@ dist-ssr
 *.njsproj
 *.sln
 *.sw?
+
+# Local AI/developer working files
+.claude/
+PORTFOLIO_XREAL_VISUAL_RECON.md

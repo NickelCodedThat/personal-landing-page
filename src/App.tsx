@@ -4,6 +4,7 @@ import Home from './components/Home'
 import CaseStudy from './components/CaseStudy'
 import NotFound from './components/NotFound'
 import Footer from './components/Footer'
+import LaunchIntro from './components/LaunchIntro'
 
 function App() {
   return (
@@ -11,6 +12,8 @@ function App() {
       <a className="skip-link" href="#main-content">
         Skip to main content
       </a>
+
+      <LaunchIntro />
 
       <Header />
 

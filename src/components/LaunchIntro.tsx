@@ -2,8 +2,8 @@ import { useEffect, useState } from 'react'
 import { useLocation } from 'react-router-dom'
 
 const SESSION_KEY = 'nb-intro-shown'
-const HOLD_MS = 1050
-const EXIT_MS = 320
+const HOLD_MS = 1700
+const EXIT_MS = 420
 
 function shouldPlayIntro(pathname: string): boolean {
   if (pathname !== '/') return false

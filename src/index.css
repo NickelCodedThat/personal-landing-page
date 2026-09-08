@@ -165,7 +165,7 @@ textarea:focus-visible {
 
 .launch-intro--exiting {
   clip-path: inset(100% 0 0 0);
-  transition: clip-path 320ms var(--ease-premium);
+  transition: clip-path 420ms var(--ease-premium);
   pointer-events: none;
 }
 
@@ -176,14 +176,14 @@ textarea:focus-visible {
   right: 0;
   height: 1px;
   background: var(--color-accent);
-  box-shadow: 0 0 16px 1px rgba(141, 130, 255, 0.55);
+  box-shadow: 0 0 18px 2px rgba(141, 130, 255, 0.6);
   opacity: 0;
   transform: translateY(0);
   will-change: transform;
 }
 
 .launch-intro--exiting .launch-intro__edge {
-  animation: launch-intro-edge 320ms var(--ease-premium) forwards;
+  animation: launch-intro-edge 420ms var(--ease-premium) forwards;
 }
 
 .launch-intro__content {
@@ -193,44 +193,48 @@ textarea:focus-visible {
   padding: 0 24px;
   text-align: center;
   opacity: 1;
+  transform: scale(1);
 }
 
 .launch-intro--exiting .launch-intro__content {
   opacity: 0;
-  transition: opacity 200ms var(--ease-standard);
+  transform: scale(1.045);
+  transition:
+    opacity 280ms var(--ease-standard),
+    transform 280ms var(--ease-standard);
 }
 
 .launch-intro__signal {
   width: 32px;
   height: 2px;
-  margin-bottom: 28px;
+  margin-bottom: 30px;
   background: var(--color-accent);
   border-radius: 999px;
   transform: scaleX(0);
   opacity: 0;
-  animation: launch-intro-signal 320ms var(--ease-standard) 60ms forwards;
+  animation: launch-intro-signal 280ms var(--ease-standard) 260ms forwards;
 }
 
 .launch-intro__mark {
+  --intro-mark-tracking: -0.02em;
   margin: 0;
   color: var(--color-text);
-  font-size: clamp(2.1rem, 7vw, 3.4rem);
+  font-size: clamp(2.1rem, 8vw, 4.2rem);
   font-weight: 720;
-  letter-spacing: -0.02em;
   text-transform: uppercase;
-  animation: hero-clip-reveal 560ms var(--ease-premium) 180ms both;
+  animation: launch-intro-mark-reveal 700ms var(--ease-premium) 440ms both;
 }
 
 .launch-intro__tagline {
+  --intro-tagline-tracking: 0.18em;
   max-width: 90vw;
-  margin: 18px 0 0;
+  margin: 20px 0 0;
   color: var(--color-text-muted);
-  font-size: 0.8rem;
+  font-size: 0.88rem;
   font-weight: 600;
-  letter-spacing: 0.18em;
   text-transform: uppercase;
   white-space: nowrap;
-  animation: hero-clip-reveal 480ms var(--ease-premium) 460ms both;
+  animation: launch-intro-tagline-reveal 520ms var(--ease-premium) 900ms both;
 }
 
 @keyframes launch-intro-signal {
@@ -245,23 +249,64 @@ textarea:focus-visible {
   }
 }
 
-@keyframes launch-intro-edge {
-  from {
-    transform: translateY(0);
+@keyframes launch-intro-mark-reveal {
+  0% {
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+    letter-spacing: 0.3em;
+    transform: scale(0.96);
+  }
+
+  55% {
+    clip-path: inset(0 0 0% 0);
     opacity: 1;
   }
 
-  to {
+  100% {
+    clip-path: inset(0 0 0% 0);
+    opacity: 1;
+    letter-spacing: var(--intro-mark-tracking);
+    transform: scale(1);
+  }
+}
+
+@keyframes launch-intro-tagline-reveal {
+  0% {
+    clip-path: inset(0 0 100% 0);
+    opacity: 0;
+    letter-spacing: 0.36em;
+  }
+
+  100% {
+    clip-path: inset(0 0 0% 0);
+    opacity: 1;
+    letter-spacing: var(--intro-tagline-tracking);
+  }
+}
+
+@keyframes launch-intro-edge {
+  0% {
+    transform: translateY(0);
+    opacity: 1;
+    box-shadow: 0 0 18px 2px rgba(141, 130, 255, 0.6);
+  }
+
+  18% {
+    box-shadow: 0 0 30px 4px rgba(141, 130, 255, 0.85);
+  }
+
+  100% {
     transform: translateY(100vh);
     opacity: 0;
+    box-shadow: 0 0 18px 2px rgba(141, 130, 255, 0.6);
   }
 }
 
 @media (max-width: 480px) {
   .launch-intro__tagline {
+    --intro-tagline-tracking: 0.08em;
     max-width: 260px;
     white-space: normal;
-    letter-spacing: 0.1em;
   }
 }
 
